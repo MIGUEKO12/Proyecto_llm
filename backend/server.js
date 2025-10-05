@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const rutasUsuario = require("./rutas/usuario");
+app.use("/api/usuarios", rutasUsuario);
+
+
 // Puerto de ejecución
 const PORT = process.env.PORT || 3000;
 
